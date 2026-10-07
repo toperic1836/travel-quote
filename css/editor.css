@@ -328,3 +328,7 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--teal); bord
 .date-row .mode-sel { grid-column: 1 / -1; max-width: 260px; }
 .date-row.mode-days .m-range, .date-row.mode-range .m-days { display: none; }
 #endTimeRO { background: #f3f6f8; color: #33607a; }
+
+/* ===== 正式 logo（白字橫式，深色頁首） ===== */
+.ed-logo { width: auto; height: 40px; border: 0; border-radius: 0; }
+@media (max-width: 480px) { .ed-logo { height: 30px; } }
