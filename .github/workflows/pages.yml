@@ -26,6 +26,9 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          # Creates the Pages site with build_type=workflow when it does not exist yet.
+          enablement: true
 
       - name: Upload site root
         uses: actions/upload-pages-artifact@v3
