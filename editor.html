@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a6d8f">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>旅平險組合方案試算報價系統｜富邦人壽 南方通訊處</title>
+<link rel="icon" type="image/png" href="img/favicon.png?v=20261007fr9">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=20261007fr9">
+<link rel="stylesheet" href="css/style.css?v=20261007fr9">
+<link rel="stylesheet" href="css/editor.css?v=20261007fr9">
+</head>
+<body class="editor-body">
+<header class="ed-top">
+  <div class="ed-brand"><img class="ed-logo" src="img/logo.png?v=20261007fr9" alt="富邦人壽 南方通訊處" width="42" height="42"><span class="ed-brand-text"><span class="ed-slogan">富邦人壽 南方通訊處</span><span class="ed-title"><b>旅平險組合方案試算報價系統</b><span class="ed-internal">內部使用・請勿傳給客戶</span></span></span></div>
+  <div class="ed-actions">
+    <button type="button" class="btn btn-gold" id="btnSummaryPng">🖼 下載三方案總表圖</button>
+    <button type="button" class="btn" id="btnCopyLink" title="把客戶頁網址（報價資料全在網址內）複製下來貼到 LINE">🔗 複製客戶頁連結</button>
+    <button type="button" class="btn" id="btnOpenClient">👁 開啟客戶頁</button>
+    <button type="button" class="btn" id="btnSample">載入範例</button>
+    <button type="button" class="btn btn-ghost" id="btnClear">清空金額</button>
+    <a class="btn btn-ghost" id="lnkAccident" href="https://s193yt.github.io/accident-quote/" title="意外險保障試算報價系統">🦴 意外險報價</a>
+  </div>
+</header>
+
+
+<div class="ed-layout">
+  <form class="ed-form" id="form" autocomplete="off" onsubmit="return false">
+    <section class="ed-card agent-card" id="agentCard">
+      <h2>👤 業務員資料 <small>（填一次即可：旅平險、意外險報價共用，只存在您這台裝置的瀏覽器）</small></h2>
+      <div class="grid agent-grid">
+        <label>姓名<input type="text" id="agentName" maxlength="20" placeholder="例：王小明" autocomplete="off"></label>
+        <label>職級／職稱<input type="text" id="agentTitle" maxlength="20" list="agentTitleList" placeholder="例：業務員、主任" autocomplete="off"></label>
+        <label>電話（客戶可點擊撥號）<input type="tel" id="agentPhone" maxlength="24" placeholder="例：0912-345-678" autocomplete="off"></label>
+      </div>
+      <datalist id="agentTitleList"></datalist>
+      <div class="agent-foot"><span class="agent-unit">單位：富邦人壽 南方通訊處（固定，不可修改）</span><button type="button" class="btn btn-sm" id="agentSample">載入範例</button></div>
+      <p class="agent-status" id="agentStatus" role="status"></p>
+    </section>
+    <section class="ed-card quick-card" id="quickCard">
+      <h2>方案設定 <small>（套用後各方案的類型、保額、名稱仍可在下方個別修改）</small></h2>
+      <div class="quick-row">
+        <label>快速套用：三方案同類型 200／500／1000萬
+          <select id="quickKind">
+            <option value="prop">純產險</option>
+            <option value="life">純人壽（AT1）</option>
+            <option value="both">人壽＋產險（壽、產各同檔）</option>
+          </select>
+        </label>
+        <button type="button" class="btn btn-gold" id="btnQuickApply">⚡ 套用三方案</button>
+        <label>推薦方案（客戶頁「推薦」標示）
+          <select id="recoSel">
+            <option value="auto">自動：保障最高</option>
+            <option value="">無</option>
+            <option value="0">方案一</option>
+            <option value="1">方案二</option>
+            <option value="2">方案三</option>
+          </select>
+        </label>
+      </div>
+      <p class="hint">依年齡自動套用上限：人壽 AT1 依年齡帶（例：15～17歲 600萬、66～70歲 1000萬）；產險依 DM 投保年齡（1000萬限 18 歲以上）。方案名稱自動帶類型＋保額（例：方案二 純產險 500萬），自訂名稱不受影響直到再次套用。快速套用時方案三（1000萬）為「醫療加值」（人壽 OH1／MR＝AT1×20%；產險計畫二：海突住院 150萬・含法傳）。推薦預設「自動：保障最高」。</p>
+    </section>
+
+    <section class="ed-card">
+      <h2>行程資料 <small>（頁首只顯示：目的地、保險期間（日期＋時間）、天數；不顯示年齡）</small></h2>
+      <div class="grid g2">
+        <label>目的地<input type="text" data-k="destination" placeholder="例：日本／法國（申根）" aria-describedby="destWarn"><span class="dest-warn" id="destWarn" role="alert" hidden></span></label>
+        <label>被保險人年齡（足歲・必填）<input type="number" min="0" max="100" step="1" data-k="age" inputmode="numeric" placeholder="例：35（不會顯示在客戶頁）" aria-describedby="ageWarn ageHint"><span class="dest-warn" id="ageWarn" role="alert" hidden></span><span class="hint" id="ageHint"></span></label>
+        <div class="date-row">
+          <label class="mode-sel">輸入方式<select data-k="dateMode"><option value="days">填天數</option><option value="range">填回程日期</option></select></label>
+          <label>出發日<input type="date" data-k="startDate"></label>
+          <label>出發時間<input type="time" step="60" data-k="startTime" aria-describedby="periodHint"></label>
+          <label class="m-days">天數（1～180）<input type="number" min="1" max="180" step="1" inputmode="numeric" data-k="tripDays" placeholder="例：5"></label>
+          <label class="m-range">回程日<input type="date" data-k="endDate"></label>
+          <label>結束時間（同出發時間）<input type="text" id="endTimeRO" readonly tabindex="-1" placeholder="同出發時間"></label>
+          <div class="days-auto" id="daysAuto" aria-live="polite"><span class="days-auto-lbl">保險期間（自動計算）</span><span class="days-auto-val" id="daysAutoVal"></span><span class="days-auto-sub" id="daysAutoSub"></span></div>
+          <p class="period-hint" id="periodHint">⏱ 保險期間自<b>出發時間</b>（班機實際起飛時間）起算，每 24 小時為一天；結束時間＝出發時間（例：11/10 08:40 出發、5 天 → 11/15 08:40 結束）。「填回程日期」時天數＝回程日－出發日（最少 1 天）。</p>
+          <span class="dest-warn" id="dateWarn" role="alert" hidden></span>
+        </div>
+        <label>日期顯示
+          <select data-k="dateFormat"><option value="roc">民國（115/10/13）</option><option value="ad">西元（2026/10/13）</option></select>
+        </label>
+      </div>
+      <details class="prop-advanced" style="margin-top:10px">
+        <summary>行程進階（OH1 地區%、人壽查表地區、投保天數覆寫、年齡帶）</summary>
+        <div class="grid g2" style="margin-top:8px">
+          <label>人壽 OH1 地區限額調整
+            <select data-k="lifeRegionPct"></select>
+            <span class="hint" id="regionHint"></span>
+          </label>
+          <label>人壽費率類型
+            <select data-k="lifeRateType">
+              <option value="agency">旅行社／快易保費率</option>
+            </select>
+          </label>
+          <label>人壽旅遊地區（查表用）
+            <select data-k="lifeRegion">
+              <option value="asia14">國外亞洲14國（可附 OAA）</option>
+              <option value="other">國外其他</option>
+            </select>
+            <span class="hint">申根勾選時會自動改為「國外其他」</span>
+          </label>
+          <label>投保天數覆寫（選填）
+            <input type="number" min="1" max="365" step="1" data-k="daysOverride" inputmode="numeric" placeholder="空白＝依上方天數／日期">
+            <span class="hint">一般不需填：天數依上方輸入計算。僅在公司系統試算天數不同時手動指定</span>
+          </label>
+          <label>年齡區間（依上方年齡自動・客戶頁不顯示）
+            <select data-k="ageBand" disabled>
+              <option value="18-65">18足歲～65歲</option>
+              <option value="15-17">15足歲～17歲</option>
+              <option value="66-70">66～70歲</option>
+              <option value="71-75">71～75歲</option>
+              <option value="76-80">76～80歲</option>
+              <option value="81-100">81～100歲</option>
+              <option value="under15">未滿15足歲</option>
+            </select>
+          </label>
+        </div>
+      </details>
+      <label class="schengen-toggle">
+        <input type="checkbox" data-k="schengen">
+        <span>
+          <span class="st-title">🇪🇺 申根行程（產險改用計畫二）</span>
+          <span class="st-desc">勾選後產險自動改為「新快樂旅綜+ 計畫二（醫療加值／申根適用）」：海外突發疾病住院固定 <b>150萬</b>，保額仍依下方各方案「產險保額」。人壽視為國外其他（無 OAA），離線表無費率，需 GPTA 手填。</span>
+          <span class="hint auto" id="schengenAutoHint" hidden>已依目的地自動勾選申根</span>
+        </span>
+      </label>
+      <p class="hint" id="autoPremiumBanner" style="margin:10px 0 0;padding:8px 10px;background:#eef6ff;border-radius:8px;color:#173c66"></p>
+      <label class="check sample-check"><input type="checkbox" data-k="sample"> 標示為「範例資料」（客戶頁會出現紅色「範例」標記；正式報價請取消勾選）</label>
+    </section>
+
+    <div class="plan-tabs" id="planTabs"></div>
+    <div id="planForms"></div>
+
+    <section class="ed-card">
+      <h2>附註（選填）</h2>
+      <textarea data-k="extraNotesText" rows="3" placeholder="每行一則，會加在頁尾附註"></textarea>
+    </section>
+
+    <section class="ed-card checks" id="checks"></section>
+  <p class="build-ver" id="buildVersion">南方通訊處版 115/10/06・天數自出發時間每 24 小時計・方案類型選單＋快速套用・旅行社分項費率（AT1 114/05/15、MR/OTA 115/06/11）</p>
+  </form>
+
+  <aside class="ed-preview">
+    <div class="pv-bar">
+      <span>即時預覽</span>
+      <div class="pv-toggle">
+        <button type="button" class="on" data-w="390">手機 390px</button>
+        <button type="button" data-w="full">桌機</button>
+      </div>
+    </div>
+    <div class="pv-scroll"><div class="pv-frame" id="pvFrame"><div class="app" id="preview"></div></div></div>
+  </aside>
+</div>
+
+<script src="js/vendor/pako.min.js?v=20261007fr9"></script>
+<script src="js/vendor/html2canvas.min.js?v=20261007fr9"></script>
+<script src="js/agent-profile.js?v=20261007fr9"></script>
+<script src="js/common.js?v=20261007fr9"></script>
+<script src="js/sample-data.js?v=20261007fr9"></script>
+<script src="js/presets.js?v=20261007fr9"></script>
+<script src="js/life-component-rates.js?v=20261007fr9"></script>
+<script src="js/life-rates.js?v=20261007fr9"></script>
+<script src="js/summary-export.js?v=20261007fr9"></script>
+<script src="js/editor.js?v=20261007fr9"></script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+{
+  "meta": {
+    "v": 1,
+    "product": "富邦人壽 兒童傷害醫療旅行平安保險（MRC）＋OH1＋OAA",
+    "rateType": "agency（旅行社／快易保）",
+    "nationality": "本國人",
+    "region": "asia14（國外亞洲14國）",
+    "ageBand": "under15（未滿15足歲）",
+    "mrcWan": 60,
+    "oh1Wan": "60 或 120",
+    "oaa": true,
+    "days": "1～30",
+    "count": 60,
+    "source": "GPTA 系統試算",
+    "scrapedAt": "2026-10-06",
+    "note": "無 AT1、無 MR；僅精確相符可自動帶入，禁止內插。"
+  },
+  "rates": [
+    {
+      "days": 1,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 358
+    },
+    {
+      "days": 2,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 385
+    },
+    {
+      "days": 3,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 423
+    },
+    {
+      "days": 4,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 547
+    },
+    {
+      "days": 5,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 675
+    },
+    {
+      "days": 6,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 734
+    },
+    {
+      "days": 7,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 778
+    },
+    {
+      "days": 8,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 811
+    },
+    {
+      "days": 9,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 847
+    },
+    {
+      "days": 10,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 885
+    },
+    {
+      "days": 11,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 917
+    },
+    {
+      "days": 12,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 953
+    },
+    {
+      "days": 13,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 991
+    },
+    {
+      "days": 14,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1027
+    },
+    {
+      "days": 15,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1061
+    },
+    {
+      "days": 16,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1098
+    },
+    {
+      "days": 17,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1132
+    },
+    {
+      "days": 18,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1166
+    },
+    {
+      "days": 19,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1202
+    },
+    {
+      "days": 20,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1238
+    },
+    {
+      "days": 21,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1272
+    },
+    {
+      "days": 22,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1296
+    },
+    {
+      "days": 23,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1320
+    },
+    {
+      "days": 24,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1345
+    },
+    {
+      "days": 25,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1369
+    },
+    {
+      "days": 26,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1394
+    },
+    {
+      "days": 27,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1416
+    },
+    {
+      "days": 28,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1441
+    },
+    {
+      "days": 29,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1467
+    },
+    {
+      "days": 30,
+      "mrcWan": 60,
+      "oh1Wan": 60,
+      "oaa": true,
+      "premium": 1490
+    },
+    {
+      "days": 1,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 532
+    },
+    {
+      "days": 2,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 575
+    },
+    {
+      "days": 3,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 630
+    },
+    {
+      "days": 4,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 817
+    },
+    {
+      "days": 5,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1006
+    },
+    {
+      "days": 6,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1091
+    },
+    {
+      "days": 7,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1159
+    },
+    {
+      "days": 8,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1208
+    },
+    {
+      "days": 9,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1261
+    },
+    {
+      "days": 10,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1316
+    },
+    {
+      "days": 11,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1367
+    },
+    {
+      "days": 12,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1420
+    },
+    {
+      "days": 13,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1474
+    },
+    {
+      "days": 14,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1526
+    },
+    {
+      "days": 15,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1578
+    },
+    {
+      "days": 16,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1632
+    },
+    {
+      "days": 17,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1683
+    },
+    {
+      "days": 18,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1731
+    },
+    {
+      "days": 19,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1785
+    },
+    {
+      "days": 20,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1838
+    },
+    {
+      "days": 21,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1890
+    },
+    {
+      "days": 22,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1926
+    },
+    {
+      "days": 23,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1964
+    },
+    {
+      "days": 24,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 1999
+    },
+    {
+      "days": 25,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 2034
+    },
+    {
+      "days": 26,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 2071
+    },
+    {
+      "days": 27,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 2106
+    },
+    {
+      "days": 28,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 2143
+    },
+    {
+      "days": 29,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 2179
+    },
+    {
+      "days": 30,
+      "mrcWan": 60,
+      "oh1Wan": 120,
+      "oaa": true,
+      "premium": 2215
+    }
+  ]
+}
